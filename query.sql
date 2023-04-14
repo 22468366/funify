@@ -55,4 +55,8 @@ CREATE TABLE `Product` (
 INSERT INTO `Product` (`item`, `amount`)
 VALUES
 ('Cabinet', 200),
-('Wardrobe', 450);
+('Wardrobe', 450),
+('Dressing Table with Shelves', 1200),
+('Elora Wood Bench', 450),
+('Seater Beech Sofa Bed', 500),
+('Uji Japanese Tea Table', 600);

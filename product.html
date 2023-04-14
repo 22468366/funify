@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head >
 	<meta charset="utf-8">
 
 	<!--    COMP 7780
 	Author: LI YUEN TAT
 	Date:  12/02/2023
 -->
-	<title>Assignment1 product</title>
+	<!-- Date		Modifification					Who -->
+	<!--
+		20230328	Change Fonts to Comic Sans		Ho Chi Shing
+	-->
+	<title>Assignment2 product</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
+	<script src="https://www.paypal.com/sdk/js?client-id=AZ2KDEfqheg02_5IExGMkMjXKKHM390gpBD0q8ZIX26jM0lKtlFVHvb9KbSh8dsCZlhA9gg1wa7RQn1H&locale=en_HK&currency=HKD"></script>
+	<style>
+	
+
+	</style>
 </head>
 
 <body>
@@ -21,56 +30,274 @@
 				<a class="navbar-brand" href="#">
 					<img src="Funify-icon.png" alt="" width="30%">
 				</a>
-				<div class="navTitle" style="text-align:center">COMP 7780 Special Topics in Knowledge and Information
+				<!-- 20230328 Start -->
+				<div class="navTitle comic_font" style="text-align:center">COMP 7780 Special Topics in Knowledge and Information
 					Management <br>
 					Team no. 8, Team Name: <b>Funify!</b></span>
 				</div>
+
+				<!-- 20230328 End -->
 		</nav>
 		</br>
 	</header>
 
 	<section>
-		<div class="container">
+		
+		<!-- 20230328 Start -->
+		<div class="container comic_font">
 			<div class="row">
-				<div class="col-3">
+				<div class="col-2">
 					<div class="leftSideBar">
-						<a href="home.html"><h3>Front Page</h3></a>
-						<h3>Catalog</h3>
-						<div class="categoryBtn"><button type="button" class="btn btn-primary">Chinese Style</button>
+						<div class="brush_script_font"><a href="home.html"><h3>Home Page</h3></a></div>
+						<div id="container1"><h3>Catalog</h3></div>
+						<div class="categoryBtn container2" id="allStyle"><button type="button" class="btn btn-primary" onclick="allClass()">All Style</button>
 						</div>
-						<div class="categoryBtn"><button type="button" class="btn btn-primary">Western Style</button>
+						<div class="categoryBtn container2" id="container2"><button onclick="chineseClass()" type="button" class="btn btn-primary">Chinese Style</button>
 						</div>
-						<div class="categoryBtn"><button type="button" class="btn btn-primary">Japanese Style</button>
+						<div class="categoryBtn container2" id="container2"><button onclick="westernClass()" type="button" class="btn btn-primary">Western Style</button>
 						</div>
+						<div class="categoryBtn container2" id="container2"><button onclick="japaneseClass()" type="button" class="btn btn-primary">Japanese Style</button>
+						</div>
+
 					</div>
 				</div>
-				<div class="col-9">
-					<div class="detailItem">
+				
+				<div class="col-6">
+					<div class="detailItem Western">
 						<div class="thumbnail"><img src="furniture-01.png"></div>
 						<div class="detail">
-							<div>Product Name: Cabinet</div>
+							<div id="item1Name">Product Name: Cabinet</div>
+							<div>Style: Western</div>
 							<div>Product Size: 70cm*40cm*60cm</div>
-							<div>Price: 200hkd</div>
+							<div id="item1Price">Price: 200hkd</div>
 							<div>Lead Time: 3 days</div>
-							<div class="categoryBtn"><button type="button" class="btn btn-primary">Add to cart</button></div>
+							<div > Quanity : 
+								<select name="quality" id="quality1">
+									<option value=""></option>
+								  	<option value="1">1</option>
+								 	<option value="2">2</option>
+								  	<option value="3">3</option>
+								</select>
+							</div>
+							<br>
+							<div class="categoryBtn" id ="item1"><button onclick="addToCart(1)" type="button" class="btn btn-primary">Add to cart</button></div>
 						</div>
 					</div>
-					<div class="detailItem">
-						<div class="thumbnail"><img src="furniture-02.png"></div>
+					<div class="detailItem Chinese">
+						<div class="thumbnail"><img src="Wardrobe.png"></div>
 						<div class="detail">
-							<div>Product Name: Wardrobe</div>
+							<div id="item2Name">Product Name: Wardrobe</div>
+							<div>Style: Chinese</div>
 							<div>Product Size: 50cm*100cm*180cm</div>
-							<div>Price: 450hkd</div>
+							<div id="item2Price">Price: 450hkd</div>
 							<div>Lead Time: 3 days</div>
-							<div class="categoryBtn"><button type="button" class="btn btn-primary">Add to cart</button></div>
+							<div> Quanity : 
+								<select name="quality" id="quality2">
+									<option value=""></option>
+								  	<option value="1">1</option>
+								 	<option value="2">2</option>
+								  	<option value="3">3</option>
+								</select>
+							</div>
+							<br>
+							<div class="categoryBtn" id="item2"><button onclick="addToCart(2)" type="button" class="btn btn-primary">Add to cart</button></div>
 						</div>
+					</div>
+					<div class="detailItem Chinese">
+						<div class="thumbnail"><img src="DressingTableWithShelves.png"></div>
+						<div class="detail">
+							<div id="item3Name">Product Name: Dressing Table with Shelves</div>
+							<div>Style: Chinese</div>
+							<div>Product Size: 70cm*72cm*128cm</div>
+							<div id="item3Price">Price: 1200hkd</div>
+							<div>Lead Time: 10 days</div>
+							<div> Quanity : 
+								<select name="quality" id="quality3">
+									<option value=""></option>
+								  	<option value="1">1</option>
+								 	<option value="2">2</option>
+								  	<option value="3">3</option>
+								</select>
+							</div>
+							<br>
+							<div class="categoryBtn" id="item3"><button onclick="addToCart(3)" type="button" class="btn btn-primary">Add to cart</button></div>
+						</div>
+					</div>
+					<div class="detailItem Japanese">
+						<div class="thumbnail"><img height="210px" src="EloraSolidBench.png"></div>
+						<div class="detail">
+							<div id="item4Name">Product Name: Elora Wood Bench</div>
+							<div>Style: Japanese</div>
+							<div>Product Size: 100cm*45cm*38cm</div>
+							<div id="item4Price">Price: 450hkd</div>
+							<div>Lead Time: 3 days</div>
+							<div> Quanity : 
+								<select name="quality" id="quality4">
+									<option value=""></option>
+								  	<option value="1">1</option>
+								 	<option value="2">2</option>
+								  	<option value="3">3</option>
+								</select>
+							</div>
+							<br>
+							<div class="categoryBtn" id="item4"><button onclick="addToCart(4)" type="button" class="btn btn-primary">Add to cart</button></div>
+						</div>
+					</div>
+					<div class="detailItem Japanese">
+						<div class="thumbnail"><img height="210px" src="SeaterBeechSofaBed.png"></div>
+						<div class="detail">
+							<div id="item5Name">Product Name: Seater Beech Sofa Bed</div>
+							<div>Style: Japanese</div>
+							<div>Product Size: 85cm*178cm*80cm</div>
+							<div id="item5Price">Price: 500hkd</div>
+							<div>Lead Time: 5 days</div>
+							<div> Quanity : 
+								<select name="quality" id="quality5">
+									<option value=""></option>
+								  	<option value="1">1</option>
+								 	<option value="2">2</option>
+								  	<option value="3">3</option>
+								</select>
+							</div>
+							<br>
+							<div class="categoryBtn" id="item5"><button onclick="addToCart(5)" type="button" class="btn btn-primary">Add to cart</button></div>
+						</div>
+					</div>
+					<div class="detailItem Japanese">
+						<div class="thumbnail UjiJapaneseTeaTable" ><img src="UjiJapaneseTeaTable.jpg"></div>
+						<div class="detail">
+							<div id="item6Name">Product Name: Uji Japanese Tea Table</div>
+							<div>Style: Japanese</div>
+							<div>Product Size: 35cm*58cm*23cm</div>
+							<div id="item6Price">Price: 600hkd</div>
+							<div>Lead Time: 3 days</div>
+							<div> Quanity : 
+								<select name="quality" id="quality6">
+									<option value=""></option>
+								  	<option value="1">1</option>
+								 	<option value="2">2</option>
+								  	<option value="3">3</option>
+								</select>
+							</div>
+							<br>
+							<div class="categoryBtn" id="item6"><button onclick="addToCart(6)" type="button" class="btn btn-primary">Add to cart</button></div>
+						</div>
+					</div>
+					<div>
+						<div class="">
+							<form action="#">
+								<div class="mb-3">
+									<div class="customerInfo" onclick="test()">CUSTOMER'S INFO</div>
+									<label for="name" class="form-label">Name</label>
+									<input type="text" class="form-control" id="name">
+								</div>
+								<div class="mb-3">
+									<label for="address" class="form-label">Address</label>
+									<input type="text" class="form-control" id="address">
+								</div>
+								<div class="mb-3">
+									<label for="Email" class="form-label">Email</label>
+									<input type="text" class="form-control" id="email">
+								</div>
+								<div class="mb-3">
+									<label for="Tel" class="form-label">Tel</label>
+									<input type="text" class="form-control" id="tel">
+								</div>
+
+								
+								
+								<!-- <button  class="btn btn-primary" id="myBtn">Submit</button> -->
+	
+							</form>
+						</div>
+
+						
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
+				<div id="orderSummary" class="col-4 center ">
+					<div class="orderSummary">Order Summary</div>
+					<div class="column">
+						<div>Item</div>
+						<div>Qty</div>
+						<div>Amount</div>
+					</div>
+					<div class="column" >
+						<div id="Item1"></div><div class="conternCenter" id="Qty1"></div><div class="conternCenter" id="Amount1"></div><div class="xColor conternCenter" id="x1" onclick="removeFromCart(1)"></div>
+					</div>
+					<div class="column">
+						<div id="Item2"></div><div class="conternCenter" id="Qty2"></div><div class="conternCenter" id="Amount2"></div><div class="xColor conternCenter" id="x2" onclick="removeFromCart(2)"></div>
+					</div>
+					<div class="column ">
+						<div id="Item3"></div><div class="conternCenter" id="Qty3"></div><div class="conternCenter" id="Amount3"></div><div class="xColor conternCenter" id="x3" onclick="removeFromCart(3)"></div>
+					</div>
+					<div class="column conternCenter">
+						<div id="Item4"></div><div class="conternCenter" id="Qty4"></div><div class="conternCenter" id="Amount4"></div><div class="xColor conternCenter" id="x4" onclick="removeFromCart(4)"></div>
+					</div>
+					<div class="column">
+						<div id="Item5"></div><div class="conternCenter" id="Qty5"></div><div class="conternCenter" id="Amount5"></div><div class="xColor conternCenter" id="x5" onclick="removeFromCart(5)"></div>
+					</div>
+					<div class="column">
+						<div id="Item6"></div><div class="conternCenter" id="Qty6"></div><div class="conternCenter" id="Amount6"></div><div class="xColor conternCenter" id="x6" onclick="removeFromCart(6)"></div>
+					</div>
 
-	<footer class="commonFooter">
+				<div id="checkOut" class="checkOutButton"><img src="checkOut.png" alt="" >Checkout</div>
+				</div>
+			</div>
+			<!-- <div class="topRight">
+				test
+			</div> -->
+		</div>
+		<!-- 20230328 End -->
+		
+	</section>
+	<!-- 20230328 Start -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+		  <div class="modal-body">
+			  <p></p>
+			  <p></p>
+			  <p></p>
+
+				<p class="center" ">Confirm Payment</p>
+				<div class="column2">
+					<div>Item</div>
+					<div>Qty</div>
+					<div>Amount</div>
+				</div>
+			</div>
+			<div class="column2" >
+				<div id="payItem1"></div><div class="conternCenter" id="payQty1"></div><div class="conternCenter" id="payAmount1"></div>
+			</div>
+			<div class="column2">
+				<div id="payItem2"></div><div class="conternCenter" id="payQty2"></div><div class="conternCenter" id="payAmount2"></div>
+			</div>
+			<div class="column2">
+				<div id="payItem3"></div><div class="conternCenter" id="payQty3"></div><div class="conternCenter" id="payAmount3"></div>
+			</div>
+			<div class="column2">
+				<div id="payItem4"></div><div class="conternCenter" id="payQty4"></div><div class="conternCenter" id="payAmount4"></div>
+			</div>
+			<div class="column2">
+				<div id="payItem5"></div><div class="conternCenter" id="payQty5"></div><div class="conternCenter" id="payAmount5"></div>
+			</div>
+			<div class="column2">
+				<div id="payItem6"></div><div class="conternCenter" id="payQty6"></div><div class="conternCenter" id="payAmount6"></div>
+			</div>
+			   <p class="totalAmount">Total amount: <span id="checkOutText">0</span></p>
+				<div id="paypal"></div>
+			   <span class="close"><button class="btn btn-primary">Close</button></span>
+			<!-- <span class="checkout"><button class="btn btn-primary">PayPal </button></span> -->
+			
+		  </div>
+		 
+		</div>
+	  
+	</div>
+
+	
+	<footer class="commonFooter comic_font">
 		<ul>
 			<li>HUNG Ming Chun (22463399)</li>
 			<li>WONG Hiu Chun (22467181)</li>
@@ -80,7 +307,230 @@
 			<li>LI Yuen Tat (22467173)</li>
 		</ul>
 	</footer>
+	<!-- 20230328 End -->
 
 </body>
+<script>
+	localStorageClear()
 
+	function localStorageClear(){
+		// localStorage.clear();
+		localStorage.setItem("total",0);
+		localStorage.setItem("allPurchase","");
+		for(var i=1;i<7;i++){
+			localStorage.setItem("item"+i,JSON.stringify([0,0,0]));
+			
+		}
+	}
+
+	function addToCart(i){
+		if (document.getElementById("quality"+i).value !=""){
+			var newArray=[];
+			document.getElementById("Item"+i).innerHTML = window.allItem[i-1]["item"];
+			newArray.push(window.allItem[i-1]["item"]);
+			document.getElementById("Qty"+i).innerHTML = document.getElementById("quality"+i).value;
+			newArray.push(document.getElementById("quality"+i).value);
+			document.getElementById("Amount"+i).innerHTML =window.allItem[i-1]["amount"]*parseInt(document.getElementById("quality"+i).value);
+			newArray.push(window.allItem[i-1]["amount"]*parseInt(document.getElementById("quality"+i).value))
+			document.getElementById("x"+i).innerHTML = "X";
+			localStorage.setItem("item"+i, JSON.stringify(newArray));
+
+			document.getElementById("payItem"+i).innerHTML = window.allItem[i-1]["item"];
+			document.getElementById("payQty"+i).innerHTML = document.getElementById("quality"+i).value;
+			document.getElementById("payAmount"+i).innerHTML =window.allItem[i-1]["amount"]*parseInt(document.getElementById("quality"+i).value);
+
+		}
+	}
+
+	function removeFromCart (i){
+		document.getElementById("Item"+i).innerHTML = "";
+		document.getElementById("Qty"+i).innerHTML = "";
+		document.getElementById("Amount"+i).innerHTML ="";
+		document.getElementById("x"+i).innerHTML = "";
+		localStorage.setItem("item"+i,JSON.stringify([0,0,0]));
+
+	}
+
+	function chineseClass(){
+		var japaneseClass = document.getElementsByClassName("Japanese");
+		for(var i=0;i<japaneseClass.length;i++){
+			japaneseClass[i].classList.add("hidden")
+		}
+		var westernClass = document.getElementsByClassName("Western");
+		for(var i=0;i<westernClass.length;i++){
+			westernClass[i].classList.add("hidden")
+		}
+		var chineseClass = document.getElementsByClassName("Chinese");
+		for(var i=0;i<chineseClass.length;i++){
+			chineseClass[i].classList.remove("hidden")
+		}
+	}
+
+	function japaneseClass(){
+		var chineseClass = document.getElementsByClassName("Chinese");
+		for(var i=0;i<chineseClass.length;i++){
+			chineseClass[i].classList.add("hidden")
+		}
+		var westernClass = document.getElementsByClassName("Western");
+		for(var i=0;i<westernClass.length;i++){
+			westernClass[i].classList.add("hidden")
+		}
+		var japaneseClass = document.getElementsByClassName("Japanese");
+		for(var i=0;i<japaneseClass.length;i++){
+			japaneseClass[i].classList.remove("hidden")
+		}
+	}
+
+	function westernClass(){
+		var japaneseClass = document.getElementsByClassName("Japanese");
+		for(var i=0;i<japaneseClass.length;i++){
+			japaneseClass[i].classList.add("hidden")
+		}
+		var chineseClass = document.getElementsByClassName("Chinese");
+		for(var i=0;i<chineseClass.length;i++){
+			chineseClass[i].classList.add("hidden")
+		}
+		var westernClass = document.getElementsByClassName("Western");
+		for(var i=0;i<westernClass.length;i++){
+			westernClass[i].classList.remove("hidden")
+		}
+	}	
+
+	function allClass(){
+		var japaneseClass = document.getElementsByClassName("Japanese");
+		for(var i=0;i<japaneseClass.length;i++){
+			japaneseClass[i].classList.remove("hidden")
+		}
+		var chineseClass = document.getElementsByClassName("Chinese");
+		for(var i=0;i<chineseClass.length;i++){
+			chineseClass[i].classList.remove("hidden")
+		}
+		var westernClass = document.getElementsByClassName("Western");
+		for(var i=0;i<westernClass.length;i++){
+			westernClass[i].classList.remove("hidden")
+		}
+	}	
+
+	function allPurchase(){
+		var allPurchase =[];
+		for(var i=1;i<7;i++){
+			
+			if (localStorage.getItem("item"+i)!="[0,0,0]"){
+
+				currentItem = JSON.parse(localStorage.getItem("item"+i));
+				allPurchase.push(currentItem[0]+" *"+currentItem[1]);
+			}
+		}
+		localStorage.setItem("allPurchase",allPurchase)
+		console.log(allPurchase)
+	}
+	function saveOrder(){
+		allPurchase();
+		// console.log(new Date().toLocaleDateString());
+		const url = `http://localhost:3000/api/orders`
+
+		let headers = {
+			"Content-Type": "application/json",
+			"Accept": "application/json",
+		}
+
+		let body = {
+			"transaction_date": new Date().toLocaleDateString(),
+			"item": localStorage.getItem("allPurchase"),
+			"qty": 1,
+			"amount": localStorage.getItem("total"),
+			"name": document.getElementById("name").value,
+			"address": document.getElementById("address").value,
+			"email": document.getElementById("email").value,
+			"tel": document.getElementById("tel").value,
+			"transaction_status": "P",
+			"delivery_status": "I"
+			
+		}
+
+		fetch(url, {
+			method: "POST",
+			headers: headers,
+			body: JSON.stringify(body)
+		})
+			.then(response => response.json())
+			.then(json => console.log(json));
+	}
+
+
+
+	
+	fetch('http://localhost:3000/api/products')
+    .then((response) => {
+        return response.json();
+    })
+    .then( (response) => {
+		window.allItem = response;
+		for(let i=1;i<7;i++){
+			var itemName = "item"+i+"Name";
+			document.getElementById(itemName).innerHTML = "Product Name: "+ response[i-1]["item"];
+			var itemPrice = "item"+i+"Price";
+			document.getElementById(itemPrice).innerHTML ="Price: " + parseInt(response[i-1]["amount"]) + "	HKD";
+			// console.log(i)
+		}
+		console.log(response);
+
+    })
+    .catch((error) => {
+        console.log(`Error: ${error}`);
+		alert("Failed to connect database, please check if server start properly." );
+    })
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("checkOut");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+	var total = 0;
+	for(var i=1;i<7;i++){
+		total += parseInt(JSON.parse(localStorage.getItem("item"+i))[2]);
+	}
+	localStorage.setItem("total",total)
+	document.getElementById("checkOutText").innerHTML= total;
+  	if(parseInt(localStorage.getItem("total"))>0){
+		saveOrder();
+		modal.style.display = "block";
+	}
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+paypal.Buttons({
+		createOrder: function (data, actions) {
+				return actions.order.create({
+					purchase_units:[{
+						amount:{
+							value: parseInt(localStorage.getItem("total"))
+						}
+					}]
+				});
+		},
+		onApprove: function(data, actions) {
+			return actions.order.capture().then(function(details){
+				alert('123');
+			});
+		}
+}).render('#paypal')
+</script>
 </html>

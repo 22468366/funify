@@ -1,3 +1,6 @@
+// const cors = require('cors');
+
+
 /*
 	http_server_input_file.js
 	

@@ -104,10 +104,18 @@ router.get('/orders', (req, res) => {
 });
 
 // Get order by ID
+// router.get('/orders/:id', (req, res) => {
+//   connection.query('SELECT * FROM `Order` WHERE order_ID = ?', [req.params.id], (err, results) => {
+//     if (err) return res.status(500).send(err);
+//     res.send(results[0]);
+//   });
+// });
+
+// Get order by name
 router.get('/orders/:id', (req, res) => {
-  connection.query('SELECT * FROM `Order` WHERE order_ID = ?', [req.params.id], (err, results) => {
+  connection.query('SELECT * FROM `Order` WHERE name = ?', [req.params.id], (err, results) => {
     if (err) return res.status(500).send(err);
-    res.send(results[0]);
+    res.send(results);
   });
 });
 
